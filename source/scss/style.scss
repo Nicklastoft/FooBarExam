@@ -1,8 +1,184 @@
-body{
-    background-color: blue;
+$color-fooOrange: #FF6F00;
+$color-bgGrey: #EFEFEF;
+$color-bgWhite: #FFFFFF;
+$color-textGrey: #646464;
+$color-textDarkGrey: #303030;
+$color-circBlue: #250FEC;
+$shadow-big:3px 3px 40px #0000007e;
+$shadow-small:3px 3px 10px #00000048;
+* {
+    margin: 0;
+    padding: 0;
 }
-div{
-    background-color: green;
-    width: 200px;
-    height: 200px;
+
+body {
+    background-color: $color-fooOrange;
+    #main {
+        width: 97vw;
+        height: 94vh;
+        margin: 3vh auto;
+        background-color: $color-bgGrey;
+        box-shadow: $shadow-big;
+        display: grid;
+        grid-template-columns: 3% 1fr 3%;
+        grid-template-rows: 4% 20% 35% 36% 5%;
+        #logo {
+            font-family: europa, sans-serif;
+            font-style: italic;
+            text-transform: uppercase;
+            color: $color-fooOrange;
+            font-size: 3vw;
+            margin: 0 auto;
+            font-weight: bold;
+            text-align: center;
+            grid-column: 2;
+            grid-row: 2;
+            h1 {
+                align-self: center;
+            }
+            span {
+                font-weight: lighter;
+            }
+            .longline {
+                border: $color-fooOrange 1px solid;
+                width: 95%;
+            }
+            .shortline {
+                border: $color-fooOrange 1px solid;
+                margin: 15px auto;
+                width: 80%;
+            }
+        }
+        #col4split {
+            grid-column: 2;
+            grid-row: 3;
+            display: grid;
+            grid-template-columns: 28% 20.5% 20.5% 28%;
+            grid-gap: 1%;
+            margin-bottom: 1%;
+            h4{
+                position: relative;
+                top: 15px;
+                text-transform: uppercase;
+                left: 15px;
+            }
+            #queue{
+                width: 100%;
+                height: 100%;
+                background-color: $color-bgWhite;
+                grid-column: 1;
+                grid-row: 1;
+            }
+            #sales{
+                width: 100%;
+                height: 100%;
+                background-color: $color-bgWhite;
+                grid-column: 2;
+                grid-row: 1;
+            }
+            #prognosis{
+                width: 100%;
+                height: 100%;
+                background-color: $color-bgWhite;
+                grid-column: 3;
+                grid-row: 1;
+            }
+            #bartenders{
+                width: 100%;
+                height: 100%;
+                background-color: $color-bgWhite;
+                grid-column: 4;
+                grid-row: 1;
+            }
+        }
+        #beers {
+            width: 100%;
+            height: 100%;
+            grid-column: 2;
+            grid-row: 4;
+            background-color: $color-bgWhite;
+            .header{
+                width: 100%;
+                height: 17%;
+                display: grid;
+                grid-template-columns: 1fr 20% 1fr;
+                .alko{
+                    text-transform: uppercase;
+                    color: $color-textDarkGrey;
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    h4{
+                        align-self: center;
+                        text-align: end;
+                        font-size: 15px;
+                        margin-right: 10px;
+                    }
+                }
+                .popu{
+                    text-transform: uppercase;
+                    color: $color-textDarkGrey;
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    h4{
+                        align-self: center;
+                        text-align: start;
+                        font-size: 15px;
+                        margin-left: 10px;
+                    }
+                }
+                .headline{
+                    text-align: center;
+                    color: $color-textDarkGrey;
+                    display: grid;
+                    h2{
+                        align-self: center;
+                        font-size: 35px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .beergrid{
+                width: 96%;
+                height: 78%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+                column-gap: 1.1%;
+                .beer{
+                    box-shadow: $shadow-small;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color-bgWhite;
+                }
+            }    
+        }
+    }
+}
+.blue-circ{
+    border-radius: 50%;
+    align-self: center;
+    height: 40px;
+    width: 40px;
+    background-color: $color-circBlue;
+    display: grid;
+    p{
+        color: #ffffff;
+        text-align: center;
+        align-self: center;
+    }
+}
+.orange-circ{
+    border-radius: 50%;
+    align-self: center;
+    height: 40px;
+    width: 40px;
+    background-color: $color-fooOrange;
+    display: grid;
+    p{
+        color: #ffffff;
+        text-align: center;
+        align-self: center;
+    }
 }

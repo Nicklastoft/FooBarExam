@@ -22,4 +22,7 @@ a - Data indsamling - hvad kan jeg vise, hvad ville give mening at vise
 b - Basic mappe/filstruktur & minify & transpiling & git ("init" commit)
 c - Inspirationsindsamling til design
 d - AdobeXD sketch
-e - 
+e - HTML & CSS layout
+f - Module Creation1
+g - 
+h -
