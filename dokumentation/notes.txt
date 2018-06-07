@@ -20,7 +20,7 @@
 
 
 //   Dokumentation
-- Data indsamling - hvad kan jeg vise, hvad ville give mening at vise
-- Basic mappe/filstruktur & minify & transpiling
-- Inspirationsindsamling til design
--
+a - Data indsamling - hvad kan jeg vise, hvad ville give mening at vise
+b - Basic mappe/filstruktur & minify & transpiling & git ("init" commit)
+c - Inspirationsindsamling til design
+d - AdobeXD sketch
