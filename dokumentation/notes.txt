@@ -2,8 +2,9 @@
 
 
 
-- {Gennemsnitlig serveringstid
-  {Kø
+- Gennemsnitlig serveringstid, højeste laveste
+  
+- Kø
 
 - Øltyper (navn osv, popularitet, alkohol)
     - tid til øl løber tør / skal bestilles
@@ -13,8 +14,6 @@
     - Aktivitet per bartender (procent af hvor meget af deres tid på arbejde de serverer gæster, den dag)
 
 - Dagsprognose for salg
-
-- Bar open / closed? time until open? how long has it been open?
 
 
 
