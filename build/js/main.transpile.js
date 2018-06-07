@@ -2,4 +2,4 @@
 
 var data = FooBar.getData();
 
-// window.addEventListener("DOMContentLoaded", myStart);
+// window.addEventListener("DOMContentLoaded", toggleFullScreen);

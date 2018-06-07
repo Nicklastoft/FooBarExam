@@ -21,8 +21,14 @@
 a - Data indsamling - hvad kan jeg vise, hvad ville give mening at vise
 b - Basic mappe/filstruktur & minify & transpiling & git ("init" commit)
 c - Inspirationsindsamling til design
-d - AdobeXD sketch
-e - HTML & CSS layout
-f - Module Creation1
-g - 
-h -
+d - AdobeXD sketch mobil/tablet/desktop
+e - HTML & CSS layout mobil/tablet/desktop
+f - Module Creation = Beers
+g - Module Creation = Queue
+h - Module Creation = Sales
+i - Module Creation = Prognosis
+j - Module Creation = Bartenders
+k - Make the site beautiful
+l - Transitions (sigh)
+m - 
+n - 
