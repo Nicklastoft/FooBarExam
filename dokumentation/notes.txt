@@ -1,10 +1,9 @@
 //   Ideer til eksamensopgaven
 
 
+- Totalt antal salg
 
-- Gennemsnitlig serveringstid, højeste laveste
-  
-- Kø
+- Gennemsnitlig kø tid, højeste laveste
 
 - Øltyper (navn osv, popularitet, alkohol)
     - tid til øl løber tør / skal bestilles
@@ -23,3 +22,4 @@ a - Data indsamling - hvad kan jeg vise, hvad ville give mening at vise
 b - Basic mappe/filstruktur & minify & transpiling & git ("init" commit)
 c - Inspirationsindsamling til design
 d - AdobeXD sketch
+e - 
