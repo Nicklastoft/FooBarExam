@@ -1,0 +1,26 @@
+//   Ideer til eksamensopgaven
+
+
+
+- {Gennemsnitlig serveringstid
+  {Kø
+
+- Øltyper (navn osv, popularitet, alkohol)
+    - tid til øl løber tør / skal bestilles
+            MODAL - information om produkterne (descriptions)
+
+- Nuværende bartendere bag baren (minus dem som har pause, grey pausefolk ud)
+    - Aktivitet per bartender (procent af hvor meget af deres tid på arbejde de serverer gæster, den dag)
+
+- Dagsprognose for salg
+
+- Bar open / closed? time until open? how long has it been open?
+
+
+
+
+//   Dokumentation
+- Data indsamling - hvad kan jeg vise, hvad ville give mening at vise
+- Basic mappe/filstruktur & minify & transpiling
+- Inspirationsindsamling til design
+-

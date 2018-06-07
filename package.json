@@ -1,0 +1,20 @@
+{
+  "name": "Exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass source/scss/style.scss build/css/style.min.css --output-style compressed",
+    "transpile": "babel source/js/main.js --out-file build/js/main.transpile.js --presets=env",
+    "watcher": "watch \"npm run sass && npm run transpile\" source/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "node-sass": "^4.9.0",
+    "watch": "^1.0.2"
+  }
+}
