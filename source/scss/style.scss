@@ -98,7 +98,6 @@ body{
                 }
             }
             .bartenders{
-                height: 350px;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 display: flex;
@@ -113,6 +112,42 @@ body{
                     width: 100%;
                     margin: 15px;
                     align-self: flex-end;
+                    display: flex;
+                    flex-direction: column;
+                .bartenderalign{
+                    align-self: flex-end;
+                    margin-bottom: -40px;
+                    &:nth-child(2){
+                        align-self: flex-start;
+                    }
+                    &:nth-child(3){
+                        margin-bottom: 0;
+                    }
+                    .bt1{
+                        text-align: center;
+                        img{
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt2{
+                        text-align: center;
+                        img{
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt3{
+                        text-align: center;
+                        img{
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
                 }
             }
         }
