@@ -22,7 +22,7 @@ body{
 }
 
 //MEDIA QUERIES
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 250px) and (max-width: 480px) {
     #main{
         background: $color-bgGrey;
         width: 96%;
@@ -31,14 +31,11 @@ body{
         margin: 0 auto;
         margin-bottom: 2vw;
         #logo{
-            display:grid;
-            grid-template-columns: 1fr;
             text-transform: uppercase;
             text-align: center;
             color: $color-fooOrange;
             font-size: 8vw;
             margin-top: 2vw;
-            height: 100px;
             h1{
                 align-self: center;
             }
@@ -46,7 +43,6 @@ body{
                 font-weight: lighter;
             }
             .longbar{
-                grid-column: 1;
                 width: 60%;
                 border: 1px solid $color-fooOrange;
                 margin: 0 auto;
@@ -54,7 +50,6 @@ body{
                 height: 0%;
             }
             .shortbar{
-                grid-column: 1;
                 width: 40%;
                 border: 1px solid $color-fooOrange;
                 margin: 0 auto;
@@ -64,13 +59,13 @@ body{
             }
         }
         #col4split{
-            margin: 2vw auto;
+            margin: 4vw auto;
             width: 92%;
             display: grid;
             grid-template-columns: 1fr;
-            grid-gap: 2vw;
+            grid-gap: 4vw;
             .queue{
-                height: 180px;
+                height: 60vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -81,7 +76,7 @@ body{
                 }
             }
             .sales{
-                height: 180px;
+                height: 60vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -92,7 +87,7 @@ body{
                 }
             }
             .prognosis{
-                height: 180px;
+                height: 60vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -103,7 +98,7 @@ body{
                 }
             }
             .bartenders{
-                height: 180px;
+                height: 350px;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -132,45 +127,651 @@ body{
             .beerCards{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-gap: 2%;
+                column-gap: 5%;
+                width: 90%;
+                margin: 0 auto;
                 .beer{
-                    height: 250px;
+                    height: 230px;
                     width: 100%;
-
+                    box-shadow: $shadow-small;
+                    margin-bottom: 2vw;
                 }
             }
         }
         
     }
 }
-// @media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 767px) {
   
-//     //CSS
+    #main{
+        background: $color-bgGrey;
+        width: 96%;
+        height: 100%;
+        box-shadow: $shadow-big;
+        margin: 0 auto;
+        margin-bottom: 2vw;
+        #logo{
+            text-transform: uppercase;
+            text-align: center;
+            color: $color-fooOrange;
+            font-size: 8vw;
+            margin-top: 2vw;
+            h1{
+                align-self: center;
+            }
+            span{
+                font-weight: lighter;
+            }
+            .longbar{
+                width: 60%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+            .shortbar{
+                width: 40%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                margin-top: 3px;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+        }
+        #col4split{
+            margin: 4vw auto;
+            width: 92%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 4vw;
+            .queue{
+                height: 60vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .sales{
+                height: 60vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .prognosis{
+                height: 60vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .bartenders{
+                height: 350px;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+        #beers{
+            width: 92%;
+            margin: 2vw auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: $color-bgWhite;
+            box-shadow: $shadow-small;
+            .titlebar{
+                margin: 5px;
+                text-align: center;
+                h4{
+                    font-size: 35px;
+                    text-transform: uppercase;
+                }
+            }
+            .beerCards{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 3%;
+                width: 90%;
+                margin: 0 auto;
+                .beer{
+                    height: 280px;
+                    width: 100%;
+                    box-shadow: $shadow-small;
+                    margin-bottom: 2vw;
+                }
+            }
+        }
+        
+    }
     
-//   }
+}
 
 
 
-//   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
-//     //CSS
+    #main{
+        background: $color-bgGrey;
+        width: 96%;
+        height: 100%;
+        box-shadow: $shadow-big;
+        margin: 0 auto;
+        margin-bottom: 2vw;
+        #logo{
+            text-transform: uppercase;
+            text-align: center;
+            color: $color-fooOrange;
+            font-size: 8vw;
+            margin-top: 2vw;
+            h1{
+                align-self: center;
+            }
+            span{
+                font-weight: lighter;
+            }
+            .longbar{
+                width: 60%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+            .shortbar{
+                width: 40%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                margin-top: 3px;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+        }
+        #col4split{
+            margin: 2vw auto;
+            width: 94%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2vw;
+            .queue{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .sales{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .prognosis{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .bartenders{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+        #beers{
+            width: 94%;
+            margin: 2vw auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: $color-bgWhite;
+            box-shadow: $shadow-small;
+            .titlebar{
+                margin: 5px;
+                text-align: center;
+                h4{
+                    font-size: 35px;
+                    text-transform: uppercase;
+                }
+            }
+            .beerCards{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 3%;
+                width: 95%;
+                margin: 0 auto;
+                .beer{
+                    height: 350px;
+                    width: 100%;
+                    box-shadow: $shadow-small;
+                    margin-bottom: 2vw;
+                }
+            }
+        }
+        
+    }
     
-//   }
+}
 
-//   @media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   
-//     //CSS
+    #main{
+        background: $color-bgGrey;
+        width: 96%;
+        height: 100%;
+        box-shadow: $shadow-big;
+        margin: 0 auto;
+        margin-bottom: 2vw;
+        #logo{
+            text-transform: uppercase;
+            text-align: center;
+            color: $color-fooOrange;
+            font-size: 8vw;
+            margin-top: 2vw;
+            h1{
+                align-self: center;
+            }
+            span{
+                font-weight: lighter;
+            }
+            .longbar{
+                width: 60%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+            .shortbar{
+                width: 40%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                margin-top: 3px;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+        }
+        #col4split{
+            margin: 2vw auto;
+            width: 75%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2vw;
+            .queue{
+                height: 45vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .sales{
+                height: 45vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .prognosis{
+                height: 45vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .bartenders{
+                height: 45vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+        #beers{
+            width: 94%;
+            margin: 2vw auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: $color-bgWhite;
+            box-shadow: $shadow-small;
+            .titlebar{
+                margin: 5px;
+                text-align: center;
+                h4{
+                    font-size: 35px;
+                    text-transform: uppercase;
+                }
+            }
+            .beerCards{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 3%;
+                width: 95%;
+                margin: 0 auto;
+                .beer{
+                    height: 400px;
+                    width: 100%;
+                    box-shadow: $shadow-small;
+                    margin-bottom: 2vw;
+                }
+            }
+        }
+        
+    }
     
-//   }
+}
 
-//   @media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
   
-//     //CSS
+    #main{
+        background: $color-bgGrey;
+        width: 96%;
+        height: 100%;
+        box-shadow: $shadow-big;
+        margin: 0 auto;
+        margin-bottom: 2vw;
+        #logo{
+            text-transform: uppercase;
+            text-align: center;
+            color: $color-fooOrange;
+            font-size: 8vw;
+            margin-top: 2vw;
+            h1{
+                align-self: center;
+            }
+            span{
+                font-weight: lighter;
+            }
+            .longbar{
+                width: 60%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+            .shortbar{
+                width: 40%;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                margin-top: 3px;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+        }
+        #col4split{
+            margin: 2vw auto;
+            width: 94%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2vw;
+            .queue{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .sales{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .prognosis{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .bartenders{
+                height: 35vw;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+        #beers{
+            width: 94%;
+            margin: 2vw auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: $color-bgWhite;
+            box-shadow: $shadow-small;
+            .titlebar{
+                margin: 15px;
+                text-align: center;
+                h4{
+                    font-size: 45px;
+                    text-transform: uppercase;
+                }
+            }
+            .beerCards{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                column-gap: 3%;
+                width: 95%;
+                margin: 0 auto;
+                .beer{
+                    height: 300px;
+                    width: 100%;
+                    box-shadow: $shadow-small;
+                    margin-bottom: 2vw;
+                }
+            }
+        }
+        
+    }
     
-//   }
+}
 
-//   @media (min-width: 1281px) {
+@media (min-width: 1281px) {
   
-//     //CSS
+    #main{
+        background: $color-bgGrey;
+        width: 96vw;
+        height: 96vh;
+        box-shadow: $shadow-big;
+        margin: 2vh auto;
+        #logo{
+            text-transform: uppercase;
+            text-align: center;
+            color: $color-fooOrange;
+            font-size: 65px;
+            height: 20vh;
+            h1{
+                align-self: center;
+                padding-top: 3vh;
+            }
+            span{
+                font-weight: lighter;
+            }
+            .longbar{
+                width: 500px;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+            .shortbar{
+                width: 400px;
+                border: 1px solid $color-fooOrange;
+                margin: 0 auto;
+                margin-top: 3px;
+                box-shadow: $shadow-small;
+                height: 0%;
+            }
+        }
+        #col4split{
+            margin: 1vh auto;
+            width: 96%;
+            display: grid;
+            grid-template-columns: 26.5% 22% 22% 26.5%;
+            grid-gap: 1%;
+            .queue{
+                height: 35vh;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .sales{
+                height: 35vh;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .prognosis{
+                height: 35vh;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+            .bartenders{
+                height: 35vh;
+                background-color: $color-bgWhite;
+                box-shadow: $shadow-small;
+                p{
+                    position: relative;
+                    top: 15px;
+                    left: 15px;
+                    text-transform: uppercase;
+                    font-size: 20px;
+                }
+            }
+        }
+        #beers{
+            width: 96%;
+            margin: 1vh auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: $color-bgWhite;
+            box-shadow: $shadow-small;
+            height: 37vh;
+            .titlebar{
+                margin: 15px;
+                text-align: center;
+                height: 5vh;
+                h4{
+                    font-size: 45px;
+                    text-transform: uppercase;
+                }
+            }
+            .beerCards{
+                display: grid;
+                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+                column-gap: 1.1%;
+                width: 98%;
+                margin: 1vh auto;
+                height: 100%;
+                .beer{
+                    height: 25vh;
+                    width: 100%;
+                    box-shadow: $shadow-small;
+                    
+                }
+            }
+        }
+        
+    }
     
-//   }
+}
