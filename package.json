@@ -6,7 +6,8 @@
   "scripts": {
     "sass": "node-sass source/scss/style.scss build/css/style.min.css --output-style compressed",
     "transpile": "babel source/js/main.js --out-file build/js/main.transpile.js --presets=env",
-    "watcher": "watch \"npm run sass && npm run transpile\" source/"
+    "watcher": "watch \"npm run sass && npm run transpile\" source/",
+    "csswatch": "watch \"npm run sass\" source/"
   },
   "keywords": [],
   "author": "",

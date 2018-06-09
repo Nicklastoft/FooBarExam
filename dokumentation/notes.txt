@@ -3,7 +3,7 @@
 
 - Totalt antal salg
 
-- Gennemsnitlig kø tid, højeste laveste
+- Kø størrelse over tid
 
 - Øltyper (navn osv, popularitet, alkohol)
     - tid til øl løber tør / skal bestilles
@@ -32,3 +32,10 @@ k - Make the site beautiful
 l - Transitions (sigh)
 m - 
 n - 
+
+
+
+
+
+//bartenders i media queries
+// HUSK AT TRANSPILE JAVASCRIPT

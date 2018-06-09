@@ -65,14 +65,14 @@ body{
             grid-template-columns: 1fr;
             grid-gap: 4vw;
             .queue{
-                height: 60vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
-                p{
+                .graphcontainer{
                     position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
+                    width: 90%;
+                    height: 90%;
+                    left: 5px;
+                    top: 5px;
                 }
             }
             .sales{
@@ -112,42 +112,36 @@ body{
                     width: 100%;
                     margin: 15px;
                     align-self: flex-end;
-                    display: flex;
-                    flex-direction: column;
-                .bartenderalign{
-                    align-self: flex-end;
-                    margin-bottom: -40px;
-                    &:nth-child(2){
-                        align-self: flex-start;
-                    }
-                    &:nth-child(3){
-                        margin-bottom: 0;
-                    }
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
                     .bt1{
                         text-align: center;
+                        grid-column: 2/4;
+                        margin-top: 15px;
                         img{
-                            width: 120px;
-                            height: 120px;
+                            width: 40vw;
+                            height: 40vw;
                             border-radius: 50%;
                         }
                     }
                     .bt2{
                         text-align: center;
+                        grid-column: 1/3;
                         img{
-                            width: 120px;
-                            height: 120px;
+                            width: 40vw;
+                            height: 40vw;
                             border-radius: 50%;
                         }
                     }
                     .bt3{
                         text-align: center;
+                        grid-column: 2/4;
                         img{
-                            width: 120px;
-                            height: 120px;
+                            width: 40vw;
+                            height: 40vw;
                             border-radius: 50%;
                         }
                     }
-                }
                 }
             }
         }
@@ -227,15 +221,14 @@ body{
             grid-template-columns: 1fr;
             grid-gap: 4vw;
             .queue{
-                height: 60vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
-                p{
+                .graphcontainer{
                     position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
                 }
             }
             .sales{
@@ -263,15 +256,49 @@ body{
                 }
             }
             .bartenders{
-                height: 350px;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                display: flex;
+                position: relative;
                 p{
-                    position: relative;
+                    position: absolute;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
-                    font-size: 20px;
+                }
+                .tenders{
+                    width: 100%;
+                    margin: 15px;
+                    align-self: flex-end;
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    .bt1{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt2{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt3{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
                 }
             }
         }
@@ -355,15 +382,14 @@ body{
             grid-template-columns: 1fr 1fr;
             grid-gap: 2vw;
             .queue{
-                height: 35vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
-                p{
+                .graphcontainer{
                     position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
                 }
             }
             .sales{
@@ -391,15 +417,49 @@ body{
                 }
             }
             .bartenders{
-                height: 35vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                display: flex;
+                position: relative;
                 p{
-                    position: relative;
+                    position: absolute;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
-                    font-size: 20px;
+                }
+                .tenders{
+                    width: 100%;
+                    margin: 15px;
+                    align-self: flex-end;
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    .bt1{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt2{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt3{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
                 }
             }
         }
@@ -481,15 +541,14 @@ body{
             grid-template-columns: 1fr;
             grid-gap: 2vw;
             .queue{
-                height: 45vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
-                p{
+                .graphcontainer{
                     position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
                 }
             }
             .sales{
@@ -517,15 +576,49 @@ body{
                 }
             }
             .bartenders{
-                height: 45vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                display: flex;
+                position: relative;
                 p{
-                    position: relative;
+                    position: absolute;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
-                    font-size: 20px;
+                }
+                .tenders{
+                    width: 100%;
+                    margin: 15px;
+                    align-self: flex-end;
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    .bt1{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt2{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt3{
+                        text-align: center;
+                        margin-top: 20px;
+                        img{
+                            width: 20vw;
+                            height: 20vw;
+                            border-radius: 50%;
+                        }
+                    }
                 }
             }
         }
@@ -567,32 +660,32 @@ body{
   
     #main{
         background: $color-bgGrey;
-        width: 96%;
-        height: 100%;
+        width: 96vw;
+        height: 96vh;
         box-shadow: $shadow-big;
-        margin: 0 auto;
-        margin-bottom: 2vw;
+        margin: 2vh auto;
         #logo{
             text-transform: uppercase;
             text-align: center;
             color: $color-fooOrange;
-            font-size: 8vw;
-            margin-top: 2vw;
+            font-size: 65px;
+            height: 20vh;
             h1{
                 align-self: center;
+                padding-top: 3vh;
             }
             span{
                 font-weight: lighter;
             }
             .longbar{
-                width: 60%;
+                width: 500px;
                 border: 1px solid $color-fooOrange;
                 margin: 0 auto;
                 box-shadow: $shadow-small;
                 height: 0%;
             }
             .shortbar{
-                width: 40%;
+                width: 400px;
                 border: 1px solid $color-fooOrange;
                 margin: 0 auto;
                 margin-top: 3px;
@@ -601,25 +694,25 @@ body{
             }
         }
         #col4split{
-            margin: 2vw auto;
-            width: 94%;
+            margin: 1vh auto;
+            width: 96%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 2vw;
+            grid-template-columns: 26.5% 22% 22% 26.5%;
+            grid-gap: 1%;
             .queue{
-                height: 35vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
-                p{
+                height: 35vh;
+                .graphcontainer{
                     position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
                 }
             }
             .sales{
-                height: 35vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -631,7 +724,7 @@ body{
                 }
             }
             .prognosis{
-                height: 35vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -643,28 +736,65 @@ body{
                 }
             }
             .bartenders{
-                height: 35vw;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                display: flex;
+                position: relative;
                 p{
-                    position: relative;
+                    position: absolute;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
-                    font-size: 20px;
+                }
+                .tenders{
+                    width: 100%;
+                    margin: 15px;
+                    margin-top: 0;
+                    align-self: center;
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    .bt1{
+                        text-align: center;
+                        grid-column: 1;
+                        img{
+                            width: 7vw;
+                            height: 7vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt2{
+                        text-align: center;
+                        grid-column: 2;
+                        img{
+                            width: 7vw;
+                            height: 7vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt3{
+                        text-align: center;
+                        grid-column: 3;
+                        img{
+                            width: 7vw;
+                            height: 7vw;
+                            border-radius: 50%;
+                        }
+                    }
                 }
             }
         }
         #beers{
-            width: 94%;
-            margin: 2vw auto;
+            width: 96%;
+            margin: 1vh auto;
             display: grid;
             grid-template-columns: 1fr;
             background-color: $color-bgWhite;
             box-shadow: $shadow-small;
+            height: 37vh;
             .titlebar{
                 margin: 15px;
                 text-align: center;
+                height: 5vh;
                 h4{
                     font-size: 45px;
                     text-transform: uppercase;
@@ -672,15 +802,16 @@ body{
             }
             .beerCards{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                column-gap: 3%;
-                width: 95%;
-                margin: 0 auto;
+                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+                column-gap: 1.1%;
+                width: 98%;
+                margin: 1vh auto;
+                height: 100%;
                 .beer{
-                    height: 300px;
+                    height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    margin-bottom: 2vw;
+                    
                 }
             }
         }
@@ -733,15 +864,15 @@ body{
             grid-template-columns: 26.5% 22% 22% 26.5%;
             grid-gap: 1%;
             .queue{
-                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
-                p{
+                height: 35vh;
+                .graphcontainer{
                     position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
                 }
             }
             .sales{
@@ -769,15 +900,50 @@ body{
                 }
             }
             .bartenders{
-                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                display: flex;
+                position: relative;
                 p{
-                    position: relative;
+                    position: absolute;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
-                    font-size: 20px;
+                }
+                .tenders{
+                    width: 100%;
+                    margin: 15px;
+                    margin-top: 0;
+                    align-self: center;
+                    display:grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    .bt1{
+                        text-align: center;
+                        grid-column: 1;
+                        img{
+                            width: 7vw;
+                            height: 7vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt2{
+                        text-align: center;
+                        grid-column: 2;
+                        img{
+                            width: 7vw;
+                            height: 7vw;
+                            border-radius: 50%;
+                        }
+                    }
+                    .bt3{
+                        text-align: center;
+                        grid-column: 3;
+                        img{
+                            width: 7vw;
+                            height: 7vw;
+                            border-radius: 50%;
+                        }
+                    }
                 }
             }
         }

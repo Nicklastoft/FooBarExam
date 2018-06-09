@@ -13,51 +13,52 @@
 
     <div id="main">
         <div id="logo">
-            <h1><span>foo</span>bar</h1>
+            <h1>
+                <span>foo</span>bar</h1>
             <div class="longbar"></div>
             <div class="shortbar"></div>
         </div>
         <div id="col4split">
             <div class="queue">
-                <p>queue items</p>
+                <div class="graphcontainer">
+                    <canvas id="myChart"></canvas>
+                </div>
             </div>
             <div class="sales">
                 <p>sales for the day</p>
             </div>
             <div class="prognosis">
-                <p>prognosis for the day</p>
+                <p>daily prognosis</p>
             </div>
             <div class="bartenders">
                 <p>bartenders</p>
                 <div class="tenders">
-                    <div class="bartenderalign">
-                        <div class="bt1">
-                            <img src="assets/bartenders/Screen-Shot-2014-12-02-at-11.14.42.png" alt="Bartender One">    
-                            <h4>name</h4>
-                            <h5>status</h5>
-                        </div>
+                    <div class="bt1">
+                        <img src="assets/bartenders/Screen-Shot-2014-12-02-at-11.14.42.png" alt="Bartender One">
+                        <h4>name</h4>
+                        <h5>status</h5>
                     </div>
-                    <div class="bartenderalign">
-                        <div class="bt2">
-                            <img src="assets/bartenders/guy-lemieux-photo.jpg" alt="Bartender One">
-                            <h4>name</h4>
-                            <h5>status</h5>
-                        </div>
+
+
+                    <div class="bt2">
+                        <img src="assets/bartenders/guy-lemieux-photo.jpg" alt="Bartender One">
+                        <h4>name</h4>
+                        <h5>status</h5>
                     </div>
-                    <div class="bartenderalign">
-                        <div class="bt3">
-                            <img src="assets/bartenders/Owen-Guy.jpg" alt="Bartender One">
-                            <h4>name</h4>
-                            <h5>status</h5>
-                        </div>
+
+
+                    <div class="bt3">
+                        <img src="assets/bartenders/Owen-Guy.jpg" alt="Bartender One">
+                        <h4>name</h4>
+                        <h5>status</h5>
                     </div>
                 </div>
-                
+
             </div>
         </div>
         <div id="beers">
             <div class="titlebar">
-            <h4>beers</h4>
+                <h4>beers</h4>
             </div>
 
             <div class="beerCards">
@@ -75,8 +76,9 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
-    <script src="/build/js/main.transpile.js"></script>
+    <script src="/source/js/main.js"></script>
 </body>
 
 </html>
