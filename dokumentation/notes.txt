@@ -23,11 +23,11 @@ b - Basic mappe/filstruktur & minify & transpiling & git ("init" commit)
 c - Inspirationsindsamling til design
 d - AdobeXD sketch mobil/tablet/desktop
 e - HTML & CSS layout mobil/tablet/desktop
-f - Module Creation = Beers
+f - Module Creation = Bartenders
 g - Module Creation = Queue
 h - Module Creation = Sales
 i - Module Creation = Prognosis
-j - Module Creation = Bartenders
+j - Module Creation = Beers
 k - Make the site beautiful
 l - Transitions (sigh)
 m - 
@@ -36,6 +36,10 @@ n -
 
 
 
-
-//bartenders i media queries
 // HUSK AT TRANSPILE JAVASCRIPT
+
+
+hvordan kan jeg assign et unikt id til hver kunde??
+for hvert ny array i mit objekt af kunder
+assign id
+id = hvad der blev assigned sidst + 1 ELLER 1
