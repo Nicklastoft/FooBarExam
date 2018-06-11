@@ -60,20 +60,27 @@
             <div class="titlebar">
                 <h4>beers</h4>
             </div>
-
-            <div class="beerCards">
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
-                <div class="beer"></div>
+            <template id="beerTemplate">
+                <div class="beer">
+                    <div class="navn">NAVN</div>
+                    <img src="" alt="">
+                    <button class="readmore">Read More</button>
+                    <div class="tapLevel">
+                        
+                    </div>
+                </div>
+            </template>
+            <div id="beerCards">
+                
             </div>
         </div>
+    </div>
+    <div class="singleBeer">
+        <section>
+            <p class="name">NAME</p>
+            <button class="luk" onclick="document.querySelector('.singleBeer').style.display='none';">CLOSE</button>
+        </section>
+        
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>

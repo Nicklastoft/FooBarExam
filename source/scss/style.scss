@@ -968,7 +968,7 @@ body{
                     text-transform: uppercase;
                 }
             }
-            .beerCards{
+            #beerCards{
                 display: grid;
                 grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
                 column-gap: 1.1%;
@@ -979,11 +979,39 @@ body{
                     height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    
+                    img{
+                        width: 50px;
+                        height: auto;
+                    }
+                .tapLevel{
+                    width: 50px;
+                    border: 1px solid black;
+                }
                 }
             }
         }
         
     }
-    
+    .singleBeer{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color:rgba($color: #000000, $alpha: 0.6);
+        display: none;
+        section{
+            height: 50%;
+            width: 50%;
+            margin: 0 auto;
+            background-color: $color-textDarkGrey;
+            p{
+                font-size: 50px;
+                color: white;
+            }
+            .luk{
+                padding: 5px;
+            }
+        }
+    }
 }

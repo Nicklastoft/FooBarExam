@@ -1,15 +1,13 @@
 'use strict'
 window.addEventListener("DOMContentLoaded", dataTimer);
 
-let data;
-let parsed;
-let currentQueue;
 let queArray = ["0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0"];
+let salesArr = [];
 
 function dataTimer(){
-    data = FooBar.getData();
-    parsed = JSON.parse(data);
-    currentQueue = parsed.queue.length;
+    let data = FooBar.getData();
+    let parsed = JSON.parse(data);
+    let currentQueue = parsed.queue.length;
 
     // BARTENDER NAMES AND STATUS //
     let bartenderZeroName = parsed.bartenders[0].name;
@@ -42,8 +40,6 @@ function dataTimer(){
     // console.log(bartenderOneStatus);
     // console.log(bartenderTwoStatus);
     // BARTENDER NAMES AND STATUS //
-
-   
 
     var timeStamp = parsed.timestamp;
     console.log( intlDate.format( new Date( 1000 * timeStamp ) ) );
@@ -108,6 +104,15 @@ var myChart = new Chart(ctx, {
     }
 });
 
+
+///////////////////////////////////////////////////////////////////////////
+//                             SALES                                     //
+//////////////////////////////////////////////////////////////////////////
+    // console.log(parsed.serving);
+    // console.log(parsed.serving[0].id);
+    // salesArr.push();
+    // console.log(salesArr);
+
 }
 setInterval(dataTimer, 1000);
 
@@ -115,7 +120,6 @@ setInterval(dataTimer, 1000);
 //                          TIMESTAMP - NOW                              //
 //////////////////////////////////////////////////////////////////////////
 
-     // Setup once
      var DateOptions = {
         //weekday: 'long',
         //month: 'short',
@@ -126,3 +130,50 @@ setInterval(dataTimer, 1000);
         second: 'numeric'
     },
     intlDate = new Intl.DateTimeFormat( undefined, DateOptions );
+
+
+///////////////////////////////////////////////////////////////////////////
+//                                  BEERS                               //
+//////////////////////////////////////////////////////////////////////////
+
+let GlobalData = FooBar.getData();
+let GlobalJSON = JSON.parse(GlobalData);
+let beerSorts = GlobalJSON.beertypes;
+let beerTemplate = document.querySelector("#beerTemplate");
+let clone;
+
+console.log(beerSorts);
+beerList();
+
+
+function beerList(){
+    beerSorts.forEach(function(addBeer) {
+
+        clone = beerTemplate.content.cloneNode(true);
+
+        clone.querySelector(".beer .navn").textContent = addBeer.name;
+        clone.querySelector(".beer img").setAttribute("src", ("assets/labels/")+addBeer.label);
+        clone.querySelector(".readmore").addEventListener("click",seDetaljer_klik);
+        clone.querySelector(".readmore").setAttribute("data-id", addBeer.name);
+        addBeer.name;
+
+        document.querySelector("#beerCards").appendChild(clone);
+    
+    });
+}
+function seDetaljer_klik(event){
+
+    let mit_id = event.currentTarget.getAttribute("data-id");
+    // console.log("KLIK kun ID:",mit_id);
+    let single_view = beerSorts.find(       function(element){
+        return element.name == mit_id;
+    })
+    console.log("Et element fra jSON",single_view);
+    document.querySelector(".singleBeer").style.display = "block";
+    
+    
+    document.querySelector("section .name").textContent = single_view.name;
+    // document.querySelector("section .mellem_billede").src = "imgs/medium/"+single_view.billede+"-md.jpg";
+    // document.querySelector("section .vindue_pris").textContent = single_view.pris+",-";
+    // document.querySelector("section .langbeskrivelse").textContent = single_view.langbeskrivelse;
+    }
