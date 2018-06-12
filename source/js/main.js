@@ -1,8 +1,7 @@
 'use strict'
-window.addEventListener("DOMContentLoaded", dataTimer);
+window.addEventListener("DOMContentLoaded", beerList);
 
 let queArray = ["0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0", "0","0","0","0","0"];
-let salesArr = [];
 
 function dataTimer(){
     let data = FooBar.getData();
@@ -41,7 +40,7 @@ function dataTimer(){
     // console.log(bartenderTwoStatus);
     // BARTENDER NAMES AND STATUS //
 
-    var timeStamp = parsed.timestamp;
+    let timeStamp = parsed.timestamp;
     console.log( intlDate.format( new Date( 1000 * timeStamp ) ) );
 
     
@@ -55,8 +54,8 @@ queArray.unshift(currentQueue);
 queArray.pop();
 // console.log(queArray);
 
-var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
+let ctx = document.getElementById("myChart");
+let myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ["NOW", "", "", "", "", 
@@ -96,31 +95,52 @@ var myChart = new Chart(ctx, {
             display: true,
             text: 'QUEUE SIZE',
             fontColor: '#303030',
-            fontSize: 16,
+            fontSize: 20,
         },
         animation: {
             duration: 0
+        },
+        legend: {
+            display: false,
         }
     }
 });
 
 
 ///////////////////////////////////////////////////////////////////////////
-//                             SALES                                     //
+//                                 ALERTS                              //
 //////////////////////////////////////////////////////////////////////////
-    // console.log(parsed.serving);
-    // console.log(parsed.serving[0].id);
-    // salesArr.push();
-    // console.log(salesArr);
+
+if(parsed.taps[0].level <= "500"){
+    document.querySelector(".sales .AlertTapZero").style.display = "grid";
+}
+document.querySelector(".sales .AlertTapZero h4").textContent = parsed.taps[0].beer;
+if(parsed.taps[1].level <= "500"){
+    document.querySelector(".sales .AlertTapOne").style.display = "grid";
+}
+document.querySelector(".sales .AlertTapOne h4").textContent = parsed.taps[1].beer;
+if(parsed.taps[2].level <= "500"){
+    document.querySelector(".sales .AlertTapTwo").style.display = "grid";
+}
+document.querySelector(".sales .AlertTapTwo h4").textContent = parsed.taps[2].beer;
+console.log(parsed.taps[0].level);
+// console.log(parsed.taps[0].beer);
+// console.log(parsed.taps);
+
+// document.querySelector(".AlertTap button").addEventListener("click",function(ex){
+    
+//     let bla = ex.target.parentElement;
+//     console.log(bla);
+//     bla.style.display = "block";
+// })
 
 }
 setInterval(dataTimer, 1000);
-
 ///////////////////////////////////////////////////////////////////////////
 //                          TIMESTAMP - NOW                              //
 //////////////////////////////////////////////////////////////////////////
 
-     var DateOptions = {
+     let DateOptions = {
         //weekday: 'long',
         //month: 'short',
         //year: 'numeric',
@@ -140,10 +160,9 @@ let GlobalData = FooBar.getData();
 let GlobalJSON = JSON.parse(GlobalData);
 let beerSorts = GlobalJSON.beertypes;
 let beerTemplate = document.querySelector("#beerTemplate");
-let clone;
+let clone;  
 
-console.log(beerSorts);
-beerList();
+// console.log(beerSorts);
 
 
 function beerList(){
@@ -176,4 +195,6 @@ function seDetaljer_klik(event){
     // document.querySelector("section .mellem_billede").src = "imgs/medium/"+single_view.billede+"-md.jpg";
     // document.querySelector("section .vindue_pris").textContent = single_view.pris+",-";
     // document.querySelector("section .langbeskrivelse").textContent = single_view.langbeskrivelse;
+
+    
     }

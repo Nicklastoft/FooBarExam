@@ -883,12 +883,28 @@ body{
                 height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                overflow: auto;
                 p{
+                    width: 50%;
                     position: relative;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
                     font-size: 20px;
+                }
+                .matchbook{
+                    width: 100%;
+                    margin: 20px;
+                }
+                .AlertTap{
+                    width: 90%;
+                    display: none;
+                    margin: 5px auto;
+                    border: 3px solid $color-fooOrange;
+                    padding: 5px;
+                }
+                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
+                    grid-template-columns: 1fr 20%;
                 }
             }
             .prognosis{
@@ -902,6 +918,44 @@ body{
                     text-transform: uppercase;
                     font-size: 20px;
                 }
+                .bars{
+                    margin: 25px 15px 0 15px;
+                    .singleTap{
+                        display: grid;
+                        grid-template-columns: 25% 1fr;
+                        margin-bottom: 10px;
+                        height: 25px;
+                        align-items: center;
+                        .tapBox{
+                            background-color: black;
+                            height: 95%;
+                            width: 95%;
+                            padding: 2px;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
+                                width: 100%;
+                                height: 100%;
+                                background-color: $color-fooOrange;
+                                grid-column: 1;
+                                grid-row: 1;
+                            }
+                            p{
+                                text-align: center;
+                                position: static;
+                                grid-column: 1;
+                                grid-row: 1;
+                                z-index: 2;
+                                color: white;
+                                align-self: center;
+                                top: 0;
+                                left: 0;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                
             }
             .bartenders{
                 background-color: $color-bgWhite;
@@ -913,6 +967,7 @@ body{
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
+                    font-size: 20px;
                 }
                 .tenders{
                     width: 100%;
@@ -979,14 +1034,23 @@ body{
                     height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    img{
-                        width: 50px;
-                        height: auto;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    text-align: center;
+                    padding: 5px;
+                    .navn{
+                        height: 50px;
                     }
-                .tapLevel{
-                    width: 50px;
-                    border: 1px solid black;
-                }
+                    img{
+                        width: auto;
+                        height: 10vh;
+                    }
+                    button{
+                        height: 40px;
+                        align-self: end;
+                        width: 100%;
+                    }
                 }
             }
         }
