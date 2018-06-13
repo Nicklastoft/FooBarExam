@@ -2,10 +2,18 @@
 
 This is made entirely as a school project for my 3rd semester exam.
 
+## About the project
+
+This project is all about a dashboard for a beer-slinging bar to use. Technically the ideas and methods can be reused for similar projects, but alas this is merely intended to provide solid info for a boss or off-duty bartender to be well informed and have an easier time helping out.
+
+## Usage & screen sizes
+
+* This dashboard project was only ever intended to be used in conjunction with a 16:9 format screen in atleast a HD-ready size (1280x720) - anything below will not yield the result you are hoping for.
+
 ## Built With
 
 * [Visual Studio Code](https://code.visualstudio.com/) - The editor used
-* [Node-sass](https://github.com/sass/node-sass) - This might be why you find my CSS to neat and tidy :)
+* [Node-sass](https://github.com/sass/node-sass) - This might be why you find my CSS so neat and tidy :)
 
 ## Authors
 
