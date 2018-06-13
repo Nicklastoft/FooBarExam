@@ -35,25 +35,13 @@ function dataTimer(){
         document.querySelector(".bt3 h5").style.color = "#303030";
     }
 
-    // console.log(bartenderZeroStatus);
-    // console.log(bartenderOneStatus);
-    // console.log(bartenderTwoStatus);
-    // BARTENDER NAMES AND STATUS //
-
-    let timeStamp = parsed.timestamp;
-    // console.log( intlDate.format( new Date( 1000 * timeStamp ) ) );
-
-    
-    // console.log(currentQueue);
-
 ///////////////////////////////////////////////////////////////////////////
 //                          QUEUE GRAPH                                 //
 //////////////////////////////////////////////////////////////////////////
 
 queArray.unshift(currentQueue);
 queArray.pop();
-// console.log(queArray);
-
+Chart.defaults.global.defaultFontFamily = 'europa';
 let ctx = document.getElementById("myChart");
 let myChart = new Chart(ctx, {
     type: 'line',
@@ -111,37 +99,34 @@ let myChart = new Chart(ctx, {
 //                                 ALERTS                              //
 //////////////////////////////////////////////////////////////////////////
 
-if(parsed.taps[0].level <= "2500"){
+if(parsed.taps[0].level <= "200"){
     document.querySelector(".sales .AlertTapZero").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapZero h4").textContent = parsed.taps[0].beer;
-if(parsed.taps[1].level <= "300"){
+if(parsed.taps[1].level <= "200"){
     document.querySelector(".sales .AlertTapOne").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapOne h4").textContent = parsed.taps[1].beer;
-if(parsed.taps[2].level <= "300"){
+if(parsed.taps[2].level <= "200"){
     document.querySelector(".sales .AlertTapTwo").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapTwo h4").textContent = parsed.taps[2].beer;
-if(parsed.taps[3].level <= "300"){
+if(parsed.taps[3].level <= "200"){
     document.querySelector(".sales .AlertTapThree").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapThree h4").textContent = parsed.taps[3].beer;
-if(parsed.taps[4].level <= "300"){
+if(parsed.taps[4].level <= "200"){
     document.querySelector(".sales .AlertTapFour").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapFour h4").textContent = parsed.taps[4].beer;
-if(parsed.taps[5].level <= "300"){
+if(parsed.taps[5].level <= "200"){
     document.querySelector(".sales .AlertTapFive").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapFive h4").textContent = parsed.taps[5].beer;
-if(parsed.taps[6].level <= "300"){
+if(parsed.taps[6].level <= "200"){
     document.querySelector(".sales .AlertTapSix").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapSix h4").textContent = parsed.taps[6].beer;
-// console.log(parsed.taps[0].level);
-// console.log(parsed.taps[0].capacity);
-// console.log(parsed.taps);
 
 ///////////////////////////////////////////////////////////////////////////
 //                                 TAP LEVELS                            //
@@ -168,25 +153,9 @@ document.querySelector(".tapFiveName").textContent = parsed.taps[5].beer;
 document.querySelector(".tapSix").style.width = parsed.taps[6].level / parsed.taps[6].capacity * 100 + "%";
 document.querySelector(".tapSixName").textContent = parsed.taps[0].beer;
 
-// console.log(parsed.taps[0].level / parsed.taps[0].capacity * 100 + "%");
-
 
 }
 setInterval(dataTimer, 1000);
-///////////////////////////////////////////////////////////////////////////
-//                          TIMESTAMP - NOW                              //
-//////////////////////////////////////////////////////////////////////////
-
-     let DateOptions = {
-        //weekday: 'long',
-        //month: 'short',
-        //year: 'numeric',
-        //day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric'
-    },
-    intlDate = new Intl.DateTimeFormat( undefined, DateOptions );
 
 
 ///////////////////////////////////////////////////////////////////////////
@@ -220,18 +189,22 @@ function beerList(){
 function seDetaljer_klik(event){
 
     let mit_id = event.currentTarget.getAttribute("data-id");
-    // console.log("KLIK kun ID:",mit_id);
     let single_view = beerSorts.find(       function(element){
         return element.name == mit_id;
     })
-    // console.log("Et element fra jSON",single_view);
     document.querySelector(".singleBeer").style.display = "block";
     
     
     document.querySelector("section .name").textContent = single_view.name;
-    // document.querySelector("section .mellem_billede").src = "imgs/medium/"+single_view.billede+"-md.jpg";
-    // document.querySelector("section .vindue_pris").textContent = single_view.pris+",-";
-    // document.querySelector("section .langbeskrivelse").textContent = single_view.langbeskrivelse;
+    document.querySelector("section img").src = "assets/labels/"+single_view.label;
+    document.querySelector("section .category").innerHTML = "<strong>Category: </strong>"+ single_view.category;
+    document.querySelector("section .pouringspeed").innerHTML = "<strong>Pouring speed: </strong>"+ single_view.pouringSpeed;
+    document.querySelector("section .popularity").innerHTML = "<strong>Popularity: </strong>"+ single_view.popularity;
+    document.querySelector("section .alcohol").innerHTML = "<strong>Alcohol: </strong>"+ single_view.alc +" %";
 
-    
+    document.querySelector("section .desc .aroma").innerHTML = "<strong>Aroma: </strong>"+ single_view.description.aroma;
+    document.querySelector("section .desc .appearance").innerHTML = "<strong>Appearance: </strong>"+ single_view.description.appearance;
+    document.querySelector("section .desc .flavor").innerHTML = "<strong>Flavor: </strong>"+ single_view.description.flavor;
+    document.querySelector("section .desc .mouthfeel").innerHTML = "<strong>Mouthfeel: </strong>"+ single_view.description.mouthfeel;
+    document.querySelector("section .desc .overall").innerHTML = "<strong>Overall Impression: </strong>"+ single_view.description.overallImpression;
     }

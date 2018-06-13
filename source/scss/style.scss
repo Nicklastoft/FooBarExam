@@ -1,964 +1,18 @@
-@font-face {
-    font-family:"WeblySleek UI Semibold";
-    src:url("weblysleekuisb.eot?") format("eot"),url("weblysleekuisb.svg#WeblySleekUISemibold") format("svg");font-weight:normal;font-style:normal;}
-    
-
-
 $color-fooOrange: #FF6F00;
 $color-bgGrey: #EFEFEF;
 $color-bgWhite: #FFFFFF;
 $color-textGrey: #646464;
 $color-textDarkGrey: #303030;
-$color-circBlue: #250FEC;
 $shadow-big:3px 3px 40px #0000007e;
 $shadow-small:3px 3px 10px #00000048;
 * {
     margin: 0;
     padding: 0;
-    font-family: WeblySleek UI Semibold, sans-serif;
+    font-family: europa, sans-serif;
 }
 body{
     background-color: $color-fooOrange;
 }
-
-//MEDIA QUERIES
-@media (min-width: 250px) and (max-width: 480px) {
-    #main{
-        background: $color-bgGrey;
-        width: 96%;
-        height: 100%;
-        box-shadow: $shadow-big;
-        margin: 0 auto;
-        margin-bottom: 2vw;
-        #logo{
-            text-transform: uppercase;
-            text-align: center;
-            color: $color-fooOrange;
-            font-size: 8vw;
-            margin-top: 2vw;
-            h1{
-                align-self: center;
-            }
-            span{
-                font-weight: lighter;
-            }
-            .longbar{
-                width: 60%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-            .shortbar{
-                width: 40%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                margin-top: 3px;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-        }
-        #col4split{
-            margin: 4vw auto;
-            width: 92%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 4vw;
-            .queue{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                height: 60vw;
-                .graphcontainer{
-                    position: relative;
-                    width: 90%;
-                    height: 90%;
-                    left: 5px;
-                    top: 5px;
-                }
-            }
-            .sales{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                overflow: auto;
-                p{
-                    width: 50%;
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .matchbook{
-                    width: 100%;
-                    margin: 20px;
-                }
-                .AlertTap{
-                    width: 90%;
-                    display: none;
-                    margin: 5px auto;
-                    border: 3px solid $color-fooOrange;
-                    padding: 5px;
-                }
-                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
-                    grid-template-columns: 1fr 25%;
-                }
-            }
-            .prognosis{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                p{
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .bars{
-                    margin: 25px 15px 0 15px;
-                    .singleTap{
-                        display: grid;
-                        grid-template-columns: 25% 1fr;
-                        margin-bottom: 10px;
-                        height: 25px;
-                        align-items: center;    
-                        .tapBox{
-                            background-color: black;
-                            height: 100%;
-                            width: 100%;
-                            border: 1px solid black;
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
-                                width: 100%;
-                                height: 100%;
-                                background-color: $color-fooOrange;
-                                grid-column: 1;
-                                grid-row: 1;
-                                transition: 0.5 linear;
-                            }
-                            p{
-                                text-align: center;
-                                position: static;
-                                grid-column: 1;
-                                grid-row: 1;
-                                z-index: 2;
-                                color: white;
-                                align-self: center;
-                                top: 0;
-                                left: 0;
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                }
-                
-            }
-            .bartenders{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                display: flex;
-                position: relative;
-                p{
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                }
-                .tenders{
-                    width: 100%;
-                    margin: 15px;
-                    align-self: flex-end;
-                    display:grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    .bt1{
-                        text-align: center;
-                        grid-column: 2/4;
-                        margin-top: 15px;
-                        img{
-                            width: 40vw;
-                            height: 40vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt2{
-                        text-align: center;
-                        grid-column: 1/3;
-                        img{
-                            width: 40vw;
-                            height: 40vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt3{
-                        text-align: center;
-                        grid-column: 2/4;
-                        img{
-                            width: 40vw;
-                            height: 40vw;
-                            border-radius: 50%;
-                        }
-                    }
-                }
-            }
-        }
-        #beers{
-            width: 96%;
-            margin: 1vh auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            background-color: $color-bgWhite;
-            box-shadow: $shadow-small;
-            height: 37vh;
-            .titlebar{
-                margin: 15px;
-                text-align: center;
-                height: 5vh;
-                h4{
-                    font-size: 45px;
-                    text-transform: uppercase;
-                }
-            }
-            #beerCards{
-                display: grid;
-                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
-                column-gap: 1.1%;
-                width: 98%;
-                margin: 1vh auto;
-                height: 100%;
-                .beer{
-                    height: 25vh;
-                    width: 100%;
-                    box-shadow: $shadow-small;
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    justify-items: center;
-                    text-align: center;
-                    padding: 5px;
-                    .navn{
-                        height: 50px;
-                    }
-                    img{
-                        width: auto;
-                        height: 10vh;
-                    }
-                    button{
-                        height: 40px;
-                        align-self: end;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-    }
-}
-@media (min-width: 481px) and (max-width: 767px) {
-  
-    #main{
-        background: $color-bgGrey;
-        width: 96%;
-        height: 100%;
-        box-shadow: $shadow-big;
-        margin: 0 auto;
-        margin-bottom: 2vw;
-        #logo{
-            text-transform: uppercase;
-            text-align: center;
-            color: $color-fooOrange;
-            font-size: 8vw;
-            margin-top: 2vw;
-            h1{
-                align-self: center;
-            }
-            span{
-                font-weight: lighter;
-            }
-            .longbar{
-                width: 60%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-            .shortbar{
-                width: 40%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                margin-top: 3px;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-        }
-        #col4split{
-            margin: 4vw auto;
-            width: 92%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 4vw;
-            .queue{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                height: 60vw;
-                .graphcontainer{
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                }
-            }
-            .sales{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                overflow: auto;
-                p{
-                    width: 50%;
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .matchbook{
-                    width: 100%;
-                    margin: 20px;
-                }
-                .AlertTap{
-                    width: 90%;
-                    display: none;
-                    margin: 5px auto;
-                    border: 3px solid $color-fooOrange;
-                    padding: 5px;
-                }
-                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
-                    grid-template-columns: 1fr 25%;
-                }
-            }
-            .prognosis{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                p{
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .bars{
-                    margin: 25px 15px 0 15px;
-                    .singleTap{
-                        display: grid;
-                        grid-template-columns: 25% 1fr;
-                        margin-bottom: 10px;
-                        height: 25px;
-                        align-items: center;    
-                        .tapBox{
-                            background-color: black;
-                            height: 100%;
-                            width: 100%;
-                            border: 1px solid black;
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
-                                width: 100%;
-                                height: 100%;
-                                background-color: $color-fooOrange;
-                                grid-column: 1;
-                                grid-row: 1;
-                                transition: 0.5 linear;
-                            }
-                            p{
-                                text-align: center;
-                                position: static;
-                                grid-column: 1;
-                                grid-row: 1;
-                                z-index: 2;
-                                color: white;
-                                align-self: center;
-                                top: 0;
-                                left: 0;
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                }
-                
-            }
-            .bartenders{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                display: flex;
-                position: relative;
-                p{
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                }
-                .tenders{
-                    width: 100%;
-                    margin: 15px;
-                    align-self: flex-end;
-                    display:grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    .bt1{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt2{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt3{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                }
-            }
-        }
-        #beers{
-            width: 96%;
-            margin: 1vh auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            background-color: $color-bgWhite;
-            box-shadow: $shadow-small;
-            height: 37vh;
-            .titlebar{
-                margin: 15px;
-                text-align: center;
-                height: 5vh;
-                h4{
-                    font-size: 45px;
-                    text-transform: uppercase;
-                }
-            }
-            #beerCards{
-                display: grid;
-                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
-                column-gap: 1.1%;
-                width: 98%;
-                margin: 1vh auto;
-                height: 100%;
-                .beer{
-                    height: 25vh;
-                    width: 100%;
-                    box-shadow: $shadow-small;
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    justify-items: center;
-                    text-align: center;
-                    padding: 5px;
-                    .navn{
-                        height: 50px;
-                    }
-                    img{
-                        width: auto;
-                        height: 10vh;
-                    }
-                    button{
-                        height: 40px;
-                        align-self: end;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-    }
-    
-}
-
-
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-    #main{
-        background: $color-bgGrey;
-        width: 96%;
-        height: 100%;
-        box-shadow: $shadow-big;
-        margin: 0 auto;
-        margin-bottom: 2vw;
-        #logo{
-            text-transform: uppercase;
-            text-align: center;
-            color: $color-fooOrange;
-            font-size: 8vw;
-            margin-top: 2vw;
-            h1{
-                align-self: center;
-            }
-            span{
-                font-weight: lighter;
-            }
-            .longbar{
-                width: 60%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-            .shortbar{
-                width: 40%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                margin-top: 3px;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-        }
-        #col4split{
-            margin: 2vw auto;
-            width: 94%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 2vw;
-            .queue{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                height: 35vw;
-                .graphcontainer{
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                }
-            }
-            .sales{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                overflow: auto;
-                p{
-                    width: 50%;
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .matchbook{
-                    width: 100%;
-                    margin: 20px;
-                }
-                .AlertTap{
-                    width: 90%;
-                    display: none;
-                    margin: 5px auto;
-                    border: 3px solid $color-fooOrange;
-                    padding: 5px;
-                }
-                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
-                    grid-template-columns: 1fr 25%;
-                }
-            }
-            .prognosis{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                p{
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .bars{
-                    margin: 25px 15px 0 15px;
-                    .singleTap{
-                        display: grid;
-                        grid-template-columns: 25% 1fr;
-                        margin-bottom: 10px;
-                        height: 25px;
-                        align-items: center;    
-                        .tapBox{
-                            background-color: black;
-                            height: 100%;
-                            width: 100%;
-                            border: 1px solid black;
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
-                                width: 100%;
-                                height: 100%;
-                                background-color: $color-fooOrange;
-                                grid-column: 1;
-                                grid-row: 1;
-                                transition: 0.5 linear;
-                            }
-                            p{
-                                text-align: center;
-                                position: static;
-                                grid-column: 1;
-                                grid-row: 1;
-                                z-index: 2;
-                                color: white;
-                                align-self: center;
-                                top: 0;
-                                left: 0;
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                }
-                
-            }
-            .bartenders{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                display: flex;
-                position: relative;
-                p{
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                }
-                .tenders{
-                    width: 100%;
-                    margin: 15px;
-                    align-self: flex-end;
-                    display:grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    .bt1{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt2{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt3{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                }
-            }
-        }
-        #beers{
-            width: 96%;
-            margin: 1vh auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            background-color: $color-bgWhite;
-            box-shadow: $shadow-small;
-            height: 37vh;
-            .titlebar{
-                margin: 15px;
-                text-align: center;
-                height: 5vh;
-                h4{
-                    font-size: 45px;
-                    text-transform: uppercase;
-                }
-            }
-            #beerCards{
-                display: grid;
-                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
-                column-gap: 1.1%;
-                width: 98%;
-                margin: 1vh auto;
-                height: 100%;
-                .beer{
-                    height: 25vh;
-                    width: 100%;
-                    box-shadow: $shadow-small;
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    justify-items: center;
-                    text-align: center;
-                    padding: 5px;
-                    .navn{
-                        height: 50px;
-                    }
-                    img{
-                        width: auto;
-                        height: 10vh;
-                    }
-                    button{
-                        height: 40px;
-                        align-self: end;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-    }
-    
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  
-    #main{
-        background: $color-bgGrey;
-        width: 96%;
-        height: 100%;
-        box-shadow: $shadow-big;
-        margin: 0 auto;
-        margin-bottom: 2vw;
-        #logo{
-            text-transform: uppercase;
-            text-align: center;
-            color: $color-fooOrange;
-            font-size: 8vw;
-            margin-top: 2vw;
-            h1{
-                align-self: center;
-            }
-            span{
-                font-weight: lighter;
-            }
-            .longbar{
-                width: 60%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-            .shortbar{
-                width: 40%;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                margin-top: 3px;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-        }
-        #col4split{
-            margin: 2vw auto;
-            width: 75%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 2vw;
-            .queue{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                height: 45vw;
-                .graphcontainer{
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                }
-            }
-            .sales{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                overflow: auto;
-                p{
-                    width: 50%;
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .matchbook{
-                    width: 100%;
-                    margin: 20px;
-                }
-                .AlertTap{
-                    width: 90%;
-                    display: none;
-                    margin: 5px auto;
-                    border: 3px solid $color-fooOrange;
-                    padding: 5px;
-                }
-                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
-                    grid-template-columns: 1fr 25%;
-                }
-            }
-            .prognosis{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                p{
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .bars{
-                    margin: 25px 15px 0 15px;
-                    .singleTap{
-                        display: grid;
-                        grid-template-columns: 25% 1fr;
-                        margin-bottom: 10px;
-                        height: 25px;
-                        align-items: center;    
-                        .tapBox{
-                            background-color: black;
-                            height: 100%;
-                            width: 100%;
-                            border: 1px solid black;
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
-                                width: 100%;
-                                height: 100%;
-                                background-color: $color-fooOrange;
-                                grid-column: 1;
-                                grid-row: 1;
-                                transition: 0.5 linear;
-                            }
-                            p{
-                                text-align: center;
-                                position: static;
-                                grid-column: 1;
-                                grid-row: 1;
-                                z-index: 2;
-                                color: white;
-                                align-self: center;
-                                top: 0;
-                                left: 0;
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                }
-                
-            }
-            .bartenders{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                display: flex;
-                position: relative;
-                p{
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                }
-                .tenders{
-                    width: 100%;
-                    margin: 15px;
-                    align-self: flex-end;
-                    display:grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    .bt1{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt2{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt3{
-                        text-align: center;
-                        margin-top: 20px;
-                        img{
-                            width: 20vw;
-                            height: 20vw;
-                            border-radius: 50%;
-                        }
-                    }
-                }
-            }
-        }
-        #beers{
-            width: 96%;
-            margin: 1vh auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            background-color: $color-bgWhite;
-            box-shadow: $shadow-small;
-            height: 70vw;
-            .titlebar{
-                margin: 15px;
-                text-align: center;
-                height: 5vh;
-                h4{
-                    font-size: 45px;
-                    text-transform: uppercase;
-                }
-            }
-            #beerCards{
-                display: grid;
-                grid-template-columns: 18% 18% 18% 18% 18%;
-                column-gap: 1.1%;
-                width: 98%;
-                margin: 1vh auto;
-                height: 100%;
-                .beer{
-                    height: 25vh;
-                    width: 100%;
-                    box-shadow: $shadow-small;
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    justify-items: center;
-                    text-align: center;
-                    padding: 5px;
-                    .navn{
-                        height: 50px;
-                    }
-                    img{
-                        width: auto;
-                        height: 10vh;
-                    }
-                    button{
-                        height: 40px;
-                        align-self: end;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-    }
-    
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
   
     #main{
         background: $color-bgGrey;
@@ -970,11 +24,14 @@ body{
             text-transform: uppercase;
             text-align: center;
             color: $color-fooOrange;
-            font-size: 65px;
+            font-size: 45px;
             height: 20vh;
             h1{
                 align-self: center;
                 padding-top: 3vh;
+
+                padding: 0;
+                margin: 0;
             }
             span{
                 font-weight: lighter;
@@ -1019,247 +76,13 @@ body{
                 box-shadow: $shadow-small;
                 overflow: auto;
                 p{
-                    width: 50%;
+                    width: 100%;
                     position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .matchbook{
-                    width: 100%;
-                    margin: 20px;
-                }
-                .AlertTap{
-                    width: 90%;
-                    display: none;
-                    margin: 5px auto;
-                    border: 3px solid $color-fooOrange;
-                    padding: 5px;
-                }
-                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
-                    grid-template-columns: 1fr 25%;
-                }
-            }
-            .prognosis{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                p{
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
-                .bars{
-                    margin: 25px 15px 0 15px;
-                    .singleTap{
-                        display: grid;
-                        grid-template-columns: 25% 1fr;
-                        margin-bottom: 10px;
-                        height: 25px;
-                        align-items: center;    
-                        .tapBox{
-                            background-color: black;
-                            height: 100%;
-                            width: 100%;
-                            border: 1px solid black;
-                            display: grid;
-                            grid-template-columns: 1fr;
-                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
-                                width: 100%;
-                                height: 100%;
-                                background-color: $color-fooOrange;
-                                grid-column: 1;
-                                grid-row: 1;
-                                transition: 0.5 linear;
-                            }
-                            p{
-                                text-align: center;
-                                position: static;
-                                grid-column: 1;
-                                grid-row: 1;
-                                z-index: 2;
-                                color: white;
-                                align-self: center;
-                                top: 0;
-                                left: 0;
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                }
-                
-            }
-            .bartenders{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                display: flex;
-                position: relative;
-                p{
-                    position: absolute;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                }
-                .tenders{
-                    width: 100%;
-                    margin: 15px;
-                    margin-top: 0;
-                    align-self: center;
-                    display:grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    .bt1{
-                        text-align: center;
-                        grid-column: 1;
-                        img{
-                            width: 7vw;
-                            height: 7vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt2{
-                        text-align: center;
-                        grid-column: 2;
-                        img{
-                            width: 7vw;
-                            height: 7vw;
-                            border-radius: 50%;
-                        }
-                    }
-                    .bt3{
-                        text-align: center;
-                        grid-column: 3;
-                        img{
-                            width: 7vw;
-                            height: 7vw;
-                            border-radius: 50%;
-                        }
-                    }
-                }
-            }
-        }
-        #beers{
-            width: 96%;
-            margin: 1vh auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            background-color: $color-bgWhite;
-            box-shadow: $shadow-small;
-            height: 37vh;
-            .titlebar{
-                margin: 15px;
-                text-align: center;
-                height: 5vh;
-                h4{
-                    font-size: 45px;
-                    text-transform: uppercase;
-                }
-            }
-            #beerCards{
-                display: grid;
-                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
-                column-gap: 1.1%;
-                width: 98%;
-                margin: 1vh auto;
-                height: 100%;
-                .beer{
-                    height: 25vh;
-                    width: 100%;
-                    box-shadow: $shadow-small;
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    justify-items: center;
+                    top: 10px;
                     text-align: center;
-                    padding: 5px;
-                    .navn{
-                        height: 50px;
-                    }
-                    img{
-                        width: auto;
-                        height: 10vh;
-                    }
-                    button{
-                        height: 40px;
-                        align-self: end;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-    }
-    
-}
-
-@media (min-width: 1281px) {
-  
-    #main{
-        background: $color-bgGrey;
-        width: 96vw;
-        height: 96vh;
-        box-shadow: $shadow-big;
-        margin: 2vh auto;
-        #logo{
-            text-transform: uppercase;
-            text-align: center;
-            color: $color-fooOrange;
-            font-size: 65px;
-            height: 20vh;
-            h1{
-                align-self: center;
-                padding-top: 3vh;
-            }
-            span{
-                font-weight: lighter;
-            }
-            .longbar{
-                width: 500px;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-            .shortbar{
-                width: 400px;
-                border: 1px solid $color-fooOrange;
-                margin: 0 auto;
-                margin-top: 3px;
-                box-shadow: $shadow-small;
-                height: 0%;
-            }
-        }
-        #col4split{
-            margin: 1vh auto;
-            width: 96%;
-            display: grid;
-            grid-template-columns: 26.5% 22% 22% 26.5%;
-            grid-gap: 1%;
-            .queue{
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                height: 35vh;
-                .graphcontainer{
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                }
-            }
-            .sales{
-                height: 35vh;
-                background-color: $color-bgWhite;
-                box-shadow: $shadow-small;
-                overflow: auto;
-                p{
-                    width: 50%;
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
                     text-transform: uppercase;
                     font-size: 20px;
+                    font-weight: bold;
                 }
                 .matchbook{
                     width: 100%;
@@ -1272,7 +95,7 @@ body{
                     border: 3px solid $color-fooOrange;
                     padding: 5px;
                 }
-                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
+                .AlertTapZero, .AlertTapOne, .AlertTapTwo, .AlertTapThree, .AlertTapFour, .AlertTapFive, .AlertTapSix{
                     grid-template-columns: 1fr 20%;
                 }
             }
@@ -1280,19 +103,15 @@ body{
                 height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
-                p{
-                    position: relative;
-                    top: 15px;
-                    left: 15px;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                }
+                overflow: auto;
                 .bars{
-                    margin: 25px 15px 0 15px;
+                    margin: 0 10px;
+                    display: grid;
+                    height: 100%;
+                    align-items: center;
                     .singleTap{
                         display: grid;
                         grid-template-columns: 25% 1fr;
-                        margin-bottom: 10px;
                         height: 25px;
                         align-items: center;    
                         .tapBox{
@@ -1312,15 +131,12 @@ body{
                             }
                             p{
                                 text-align: center;
-                                position: static;
                                 grid-column: 1;
                                 grid-row: 1;
                                 z-index: 2;
                                 color: white;
                                 align-self: center;
-                                top: 0;
-                                left: 0;
-                                font-size: 18px;
+                                font-size: 15px;
                             }
                         }
                     }
@@ -1417,9 +233,14 @@ body{
                         height: 10vh;
                     }
                     button{
-                        height: 40px;
+                        height: 30px;
                         align-self: end;
                         width: 100%;
+                        border: 1px solid black;
+                        background-color: $color-fooOrange;
+                        color: white;
+                        width: 80%;
+                        margin: 0 auto;
                     }
                 }
             }
@@ -1436,18 +257,75 @@ body{
         display: none;
         z-index: 1000;
         section{
-            height: 50%;
-            width: 50%;
-            margin: 0 auto;
-            background-color: $color-textDarkGrey;
+            height: 80vh;
+            width: 80vw;
+            margin: 10vh 10vw;
+            background-color: $color-bgGrey;
             z-index: 1000;
+            border: 2px solid $color-fooOrange;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             p{
-                font-size: 50px;
-                color: white;
+                font-size: 30px;
+                color: $color-textDarkGrey;
+                grid-column: 1/7;
+                text-align: center;
+                align-self: center;
             }
+            img{
+                height: 40vh;
+                width: auto;
+                grid-column: 1/3;
+                align-self: center;
+                justify-self: center;
+            }
+            .category{
+                grid-column: 1/3;
+                align-self: center;
+                justify-self: center;
+            }
+            .pouringspeed{
+                grid-column: 1/3;
+                align-self: center;
+                justify-self: center;
+            }
+            .popularity{
+                grid-column: 1/3;
+                align-self: center;
+                justify-self: center;
+            }
+            .alcohol{
+                grid-column: 1/3;
+                align-self: center;
+                justify-self: center;
+            }
+
+            .desc{
+                grid-column: 3/7;
+                grid-row: 2/7;
+                margin: 10px;
+                overflow: auto;
+            }
+            .aroma, .appearance, .flavor, .mouthfeel{
+                margin-bottom: 10px;
+                span{
+                    font-weight: bold;
+                }
+            }
+            .overall{
+                margin-bottom: 100px;
+            }
+
             .luk{
-                padding: 5px;
+                position: absolute;
+                bottom: 12vh;
+                left: 45vw;
+                width: 10vw;
+                height: 6vh;
+                justify-self: center;
+                border: 1px solid black;
+                background-color: $color-fooOrange;
+                color: white;
             }
         }
     }
-}
