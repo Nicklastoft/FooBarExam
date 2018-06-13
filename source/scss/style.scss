@@ -77,18 +77,35 @@ body{
                 }
             }
             .sales{
-                height: 60vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                overflow: auto;
                 p{
+                    width: 50%;
                     position: relative;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
+                    font-size: 20px;
+                }
+                .matchbook{
+                    width: 100%;
+                    margin: 20px;
+                }
+                .AlertTap{
+                    width: 90%;
+                    display: none;
+                    margin: 5px auto;
+                    border: 3px solid $color-fooOrange;
+                    padding: 5px;
+                }
+                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
+                    grid-template-columns: 1fr 25%;
                 }
             }
             .prognosis{
-                height: 60vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -96,7 +113,47 @@ body{
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
+                    font-size: 20px;
                 }
+                .bars{
+                    margin: 25px 15px 0 15px;
+                    .singleTap{
+                        display: grid;
+                        grid-template-columns: 25% 1fr;
+                        margin-bottom: 10px;
+                        height: 25px;
+                        align-items: center;    
+                        .tapBox{
+                            background-color: black;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid black;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
+                                width: 100%;
+                                height: 100%;
+                                background-color: $color-fooOrange;
+                                grid-column: 1;
+                                grid-row: 1;
+                                transition: 0.5 linear;
+                            }
+                            p{
+                                text-align: center;
+                                position: static;
+                                grid-column: 1;
+                                grid-row: 1;
+                                z-index: 2;
+                                color: white;
+                                align-self: center;
+                                top: 0;
+                                left: 0;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                
             }
             .bartenders{
                 background-color: $color-bgWhite;
@@ -147,31 +204,50 @@ body{
             }
         }
         #beers{
-            width: 92%;
-            margin: 2vw auto;
+            width: 96%;
+            margin: 1vh auto;
             display: grid;
             grid-template-columns: 1fr;
             background-color: $color-bgWhite;
             box-shadow: $shadow-small;
+            height: 37vh;
             .titlebar{
-                margin: 5px;
+                margin: 15px;
                 text-align: center;
+                height: 5vh;
                 h4{
-                    font-size: 25px;
+                    font-size: 45px;
                     text-transform: uppercase;
                 }
             }
-            .beerCards{
+            #beerCards{
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 5%;
-                width: 90%;
-                margin: 0 auto;
+                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+                column-gap: 1.1%;
+                width: 98%;
+                margin: 1vh auto;
+                height: 100%;
                 .beer{
-                    height: 230px;
+                    height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    margin-bottom: 2vw;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    text-align: center;
+                    padding: 5px;
+                    .navn{
+                        height: 50px;
+                    }
+                    img{
+                        width: auto;
+                        height: 10vh;
+                    }
+                    button{
+                        height: 40px;
+                        align-self: end;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -234,19 +310,35 @@ body{
                 }
             }
             .sales{
-                height: 60vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                overflow: auto;
                 p{
+                    width: 50%;
                     position: relative;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
                     font-size: 20px;
+                }
+                .matchbook{
+                    width: 100%;
+                    margin: 20px;
+                }
+                .AlertTap{
+                    width: 90%;
+                    display: none;
+                    margin: 5px auto;
+                    border: 3px solid $color-fooOrange;
+                    padding: 5px;
+                }
+                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
+                    grid-template-columns: 1fr 25%;
                 }
             }
             .prognosis{
-                height: 60vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -256,6 +348,45 @@ body{
                     text-transform: uppercase;
                     font-size: 20px;
                 }
+                .bars{
+                    margin: 25px 15px 0 15px;
+                    .singleTap{
+                        display: grid;
+                        grid-template-columns: 25% 1fr;
+                        margin-bottom: 10px;
+                        height: 25px;
+                        align-items: center;    
+                        .tapBox{
+                            background-color: black;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid black;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
+                                width: 100%;
+                                height: 100%;
+                                background-color: $color-fooOrange;
+                                grid-column: 1;
+                                grid-row: 1;
+                                transition: 0.5 linear;
+                            }
+                            p{
+                                text-align: center;
+                                position: static;
+                                grid-column: 1;
+                                grid-row: 1;
+                                z-index: 2;
+                                color: white;
+                                align-self: center;
+                                top: 0;
+                                left: 0;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                
             }
             .bartenders{
                 background-color: $color-bgWhite;
@@ -305,31 +436,50 @@ body{
             }
         }
         #beers{
-            width: 92%;
-            margin: 2vw auto;
+            width: 96%;
+            margin: 1vh auto;
             display: grid;
             grid-template-columns: 1fr;
             background-color: $color-bgWhite;
             box-shadow: $shadow-small;
+            height: 37vh;
             .titlebar{
-                margin: 5px;
+                margin: 15px;
                 text-align: center;
+                height: 5vh;
                 h4{
-                    font-size: 35px;
+                    font-size: 45px;
                     text-transform: uppercase;
                 }
             }
-            .beerCards{
+            #beerCards{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                column-gap: 3%;
-                width: 90%;
-                margin: 0 auto;
+                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+                column-gap: 1.1%;
+                width: 98%;
+                margin: 1vh auto;
+                height: 100%;
                 .beer{
-                    height: 280px;
+                    height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    margin-bottom: 2vw;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    text-align: center;
+                    padding: 5px;
+                    .navn{
+                        height: 50px;
+                    }
+                    img{
+                        width: auto;
+                        height: 10vh;
+                    }
+                    button{
+                        height: 40px;
+                        align-self: end;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -396,19 +546,35 @@ body{
                 }
             }
             .sales{
-                height: 35vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                overflow: auto;
                 p{
+                    width: 50%;
                     position: relative;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
                     font-size: 20px;
+                }
+                .matchbook{
+                    width: 100%;
+                    margin: 20px;
+                }
+                .AlertTap{
+                    width: 90%;
+                    display: none;
+                    margin: 5px auto;
+                    border: 3px solid $color-fooOrange;
+                    padding: 5px;
+                }
+                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
+                    grid-template-columns: 1fr 25%;
                 }
             }
             .prognosis{
-                height: 35vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -418,6 +584,45 @@ body{
                     text-transform: uppercase;
                     font-size: 20px;
                 }
+                .bars{
+                    margin: 25px 15px 0 15px;
+                    .singleTap{
+                        display: grid;
+                        grid-template-columns: 25% 1fr;
+                        margin-bottom: 10px;
+                        height: 25px;
+                        align-items: center;    
+                        .tapBox{
+                            background-color: black;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid black;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
+                                width: 100%;
+                                height: 100%;
+                                background-color: $color-fooOrange;
+                                grid-column: 1;
+                                grid-row: 1;
+                                transition: 0.5 linear;
+                            }
+                            p{
+                                text-align: center;
+                                position: static;
+                                grid-column: 1;
+                                grid-row: 1;
+                                z-index: 2;
+                                color: white;
+                                align-self: center;
+                                top: 0;
+                                left: 0;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                
             }
             .bartenders{
                 background-color: $color-bgWhite;
@@ -467,31 +672,50 @@ body{
             }
         }
         #beers{
-            width: 94%;
-            margin: 2vw auto;
+            width: 96%;
+            margin: 1vh auto;
             display: grid;
             grid-template-columns: 1fr;
             background-color: $color-bgWhite;
             box-shadow: $shadow-small;
+            height: 37vh;
             .titlebar{
-                margin: 5px;
+                margin: 15px;
                 text-align: center;
+                height: 5vh;
                 h4{
-                    font-size: 35px;
+                    font-size: 45px;
                     text-transform: uppercase;
                 }
             }
-            .beerCards{
+            #beerCards{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                column-gap: 3%;
-                width: 95%;
-                margin: 0 auto;
+                grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+                column-gap: 1.1%;
+                width: 98%;
+                margin: 1vh auto;
+                height: 100%;
                 .beer{
-                    height: 350px;
+                    height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    margin-bottom: 2vw;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    text-align: center;
+                    padding: 5px;
+                    .navn{
+                        height: 50px;
+                    }
+                    img{
+                        width: auto;
+                        height: 10vh;
+                    }
+                    button{
+                        height: 40px;
+                        align-self: end;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -556,19 +780,35 @@ body{
                 }
             }
             .sales{
-                height: 45vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                overflow: auto;
                 p{
+                    width: 50%;
                     position: relative;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
                     font-size: 20px;
+                }
+                .matchbook{
+                    width: 100%;
+                    margin: 20px;
+                }
+                .AlertTap{
+                    width: 90%;
+                    display: none;
+                    margin: 5px auto;
+                    border: 3px solid $color-fooOrange;
+                    padding: 5px;
+                }
+                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
+                    grid-template-columns: 1fr 25%;
                 }
             }
             .prognosis{
-                height: 45vw;
+                height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
                 p{
@@ -578,6 +818,45 @@ body{
                     text-transform: uppercase;
                     font-size: 20px;
                 }
+                .bars{
+                    margin: 25px 15px 0 15px;
+                    .singleTap{
+                        display: grid;
+                        grid-template-columns: 25% 1fr;
+                        margin-bottom: 10px;
+                        height: 25px;
+                        align-items: center;    
+                        .tapBox{
+                            background-color: black;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid black;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
+                                width: 100%;
+                                height: 100%;
+                                background-color: $color-fooOrange;
+                                grid-column: 1;
+                                grid-row: 1;
+                                transition: 0.5 linear;
+                            }
+                            p{
+                                text-align: center;
+                                position: static;
+                                grid-column: 1;
+                                grid-row: 1;
+                                z-index: 2;
+                                color: white;
+                                align-self: center;
+                                top: 0;
+                                left: 0;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                
             }
             .bartenders{
                 background-color: $color-bgWhite;
@@ -627,31 +906,50 @@ body{
             }
         }
         #beers{
-            width: 94%;
-            margin: 2vw auto;
+            width: 96%;
+            margin: 1vh auto;
             display: grid;
             grid-template-columns: 1fr;
             background-color: $color-bgWhite;
             box-shadow: $shadow-small;
+            height: 70vw;
             .titlebar{
-                margin: 5px;
+                margin: 15px;
                 text-align: center;
+                height: 5vh;
                 h4{
-                    font-size: 35px;
+                    font-size: 45px;
                     text-transform: uppercase;
                 }
             }
-            .beerCards{
+            #beerCards{
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                column-gap: 3%;
-                width: 95%;
-                margin: 0 auto;
+                grid-template-columns: 18% 18% 18% 18% 18%;
+                column-gap: 1.1%;
+                width: 98%;
+                margin: 1vh auto;
+                height: 100%;
                 .beer{
-                    height: 400px;
+                    height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    margin-bottom: 2vw;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    text-align: center;
+                    padding: 5px;
+                    .navn{
+                        height: 50px;
+                    }
+                    img{
+                        width: auto;
+                        height: 10vh;
+                    }
+                    button{
+                        height: 40px;
+                        align-self: end;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -719,12 +1017,28 @@ body{
                 height: 35vh;
                 background-color: $color-bgWhite;
                 box-shadow: $shadow-small;
+                overflow: auto;
                 p{
+                    width: 50%;
                     position: relative;
                     top: 15px;
                     left: 15px;
                     text-transform: uppercase;
                     font-size: 20px;
+                }
+                .matchbook{
+                    width: 100%;
+                    margin: 20px;
+                }
+                .AlertTap{
+                    width: 90%;
+                    display: none;
+                    margin: 5px auto;
+                    border: 3px solid $color-fooOrange;
+                    padding: 5px;
+                }
+                .AlertTapZero, .AlertTapOne, .AlertTapTwo{
+                    grid-template-columns: 1fr 25%;
                 }
             }
             .prognosis{
@@ -738,6 +1052,45 @@ body{
                     text-transform: uppercase;
                     font-size: 20px;
                 }
+                .bars{
+                    margin: 25px 15px 0 15px;
+                    .singleTap{
+                        display: grid;
+                        grid-template-columns: 25% 1fr;
+                        margin-bottom: 10px;
+                        height: 25px;
+                        align-items: center;    
+                        .tapBox{
+                            background-color: black;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid black;
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
+                                width: 100%;
+                                height: 100%;
+                                background-color: $color-fooOrange;
+                                grid-column: 1;
+                                grid-row: 1;
+                                transition: 0.5 linear;
+                            }
+                            p{
+                                text-align: center;
+                                position: static;
+                                grid-column: 1;
+                                grid-row: 1;
+                                z-index: 2;
+                                color: white;
+                                align-self: center;
+                                top: 0;
+                                left: 0;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                
             }
             .bartenders{
                 background-color: $color-bgWhite;
@@ -804,7 +1157,7 @@ body{
                     text-transform: uppercase;
                 }
             }
-            .beerCards{
+            #beerCards{
                 display: grid;
                 grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
                 column-gap: 1.1%;
@@ -815,7 +1168,23 @@ body{
                     height: 25vh;
                     width: 100%;
                     box-shadow: $shadow-small;
-                    
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    text-align: center;
+                    padding: 5px;
+                    .navn{
+                        height: 50px;
+                    }
+                    img{
+                        width: auto;
+                        height: 10vh;
+                    }
+                    button{
+                        height: 40px;
+                        align-self: end;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -925,12 +1294,12 @@ body{
                         grid-template-columns: 25% 1fr;
                         margin-bottom: 10px;
                         height: 25px;
-                        align-items: center;
+                        align-items: center;    
                         .tapBox{
                             background-color: black;
-                            height: 95%;
-                            width: 95%;
-                            padding: 2px;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid black;
                             display: grid;
                             grid-template-columns: 1fr;
                             .tapZero, .tapOne, .tapTwo, .tapThree, .tapFour, .tapFive, .tapSix{
@@ -939,6 +1308,7 @@ body{
                                 background-color: $color-fooOrange;
                                 grid-column: 1;
                                 grid-row: 1;
+                                transition: 0.5 linear;
                             }
                             p{
                                 text-align: center;
@@ -1064,11 +1434,13 @@ body{
         left: 0;
         background-color:rgba($color: #000000, $alpha: 0.6);
         display: none;
+        z-index: 1000;
         section{
             height: 50%;
             width: 50%;
             margin: 0 auto;
             background-color: $color-textDarkGrey;
+            z-index: 1000;
             p{
                 font-size: 50px;
                 color: white;

@@ -41,7 +41,7 @@ function dataTimer(){
     // BARTENDER NAMES AND STATUS //
 
     let timeStamp = parsed.timestamp;
-    console.log( intlDate.format( new Date( 1000 * timeStamp ) ) );
+    // console.log( intlDate.format( new Date( 1000 * timeStamp ) ) );
 
     
     // console.log(currentQueue);
@@ -111,28 +111,65 @@ let myChart = new Chart(ctx, {
 //                                 ALERTS                              //
 //////////////////////////////////////////////////////////////////////////
 
-if(parsed.taps[0].level <= "500"){
+if(parsed.taps[0].level <= "2500"){
     document.querySelector(".sales .AlertTapZero").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapZero h4").textContent = parsed.taps[0].beer;
-if(parsed.taps[1].level <= "500"){
+if(parsed.taps[1].level <= "300"){
     document.querySelector(".sales .AlertTapOne").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapOne h4").textContent = parsed.taps[1].beer;
-if(parsed.taps[2].level <= "500"){
+if(parsed.taps[2].level <= "300"){
     document.querySelector(".sales .AlertTapTwo").style.display = "grid";
 }
 document.querySelector(".sales .AlertTapTwo h4").textContent = parsed.taps[2].beer;
-console.log(parsed.taps[0].level);
-// console.log(parsed.taps[0].beer);
+if(parsed.taps[3].level <= "300"){
+    document.querySelector(".sales .AlertTapThree").style.display = "grid";
+}
+document.querySelector(".sales .AlertTapThree h4").textContent = parsed.taps[3].beer;
+if(parsed.taps[4].level <= "300"){
+    document.querySelector(".sales .AlertTapFour").style.display = "grid";
+}
+document.querySelector(".sales .AlertTapFour h4").textContent = parsed.taps[4].beer;
+if(parsed.taps[5].level <= "300"){
+    document.querySelector(".sales .AlertTapFive").style.display = "grid";
+}
+document.querySelector(".sales .AlertTapFive h4").textContent = parsed.taps[5].beer;
+if(parsed.taps[6].level <= "300"){
+    document.querySelector(".sales .AlertTapSix").style.display = "grid";
+}
+document.querySelector(".sales .AlertTapSix h4").textContent = parsed.taps[6].beer;
+// console.log(parsed.taps[0].level);
+// console.log(parsed.taps[0].capacity);
 // console.log(parsed.taps);
 
-// document.querySelector(".AlertTap button").addEventListener("click",function(ex){
-    
-//     let bla = ex.target.parentElement;
-//     console.log(bla);
-//     bla.style.display = "block";
-// })
+///////////////////////////////////////////////////////////////////////////
+//                                 TAP LEVELS                            //
+//////////////////////////////////////////////////////////////////////////
+
+document.querySelector(".tapZero").style.width = parsed.taps[0].level / parsed.taps[0].capacity * 100 + "%";
+document.querySelector(".tapZeroName").textContent = parsed.taps[0].beer;
+
+document.querySelector(".tapOne").style.width = parsed.taps[1].level / parsed.taps[1].capacity * 100 + "%";
+document.querySelector(".tapOneName").textContent = parsed.taps[1].beer;
+
+document.querySelector(".tapTwo").style.width = parsed.taps[2].level / parsed.taps[2].capacity * 100 + "%";
+document.querySelector(".tapTwoName").textContent = parsed.taps[2].beer;
+
+document.querySelector(".tapThree").style.width = parsed.taps[3].level / parsed.taps[3].capacity * 100 + "%";
+document.querySelector(".tapThreeName").textContent = parsed.taps[3].beer;
+
+document.querySelector(".tapFour").style.width = parsed.taps[4].level / parsed.taps[4].capacity * 100 + "%";
+document.querySelector(".tapFourName").textContent = parsed.taps[4].beer;
+
+document.querySelector(".tapFive").style.width = parsed.taps[5].level / parsed.taps[5].capacity * 100 + "%";
+document.querySelector(".tapFiveName").textContent = parsed.taps[5].beer;
+
+document.querySelector(".tapSix").style.width = parsed.taps[6].level / parsed.taps[6].capacity * 100 + "%";
+document.querySelector(".tapSixName").textContent = parsed.taps[0].beer;
+
+// console.log(parsed.taps[0].level / parsed.taps[0].capacity * 100 + "%");
+
 
 }
 setInterval(dataTimer, 1000);
@@ -187,7 +224,7 @@ function seDetaljer_klik(event){
     let single_view = beerSorts.find(       function(element){
         return element.name == mit_id;
     })
-    console.log("Et element fra jSON",single_view);
+    // console.log("Et element fra jSON",single_view);
     document.querySelector(".singleBeer").style.display = "block";
     
     
