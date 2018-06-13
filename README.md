@@ -17,7 +17,7 @@ This project is all about a dashboard for a beer-slinging bar to use. Technicall
 
 ## Authors
 
-* **Nicklas Toft Povlsen** - [PurpleBooth](http://ntp-design.com/)
+* **Nicklas Toft Povlsen** - [ntp-design](http://ntp-design.com/)
 
 ## Acknowledgments
 
