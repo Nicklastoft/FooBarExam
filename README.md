@@ -4,7 +4,7 @@ This is made entirely as a school project for my 3rd semester exam.
 
 ## About the project
 
-This project is all about a dashboard for a beer-slinging bar to use. Technically the ideas and methods can be reused for similar projects, but alas this is merely intended to provide solid info for a boss or off-duty bartender to be well informed and have an easier time helping out.
+This project is all about a dashboard for a beer-slinging bar to use. Technically the ideas and methods can be reused for similar projects, but alas this is merely intended to provide solid info for a owner or off-duty bartender to be well informed and have an easier time helping out.
 
 ## Usage & screen sizes
 
