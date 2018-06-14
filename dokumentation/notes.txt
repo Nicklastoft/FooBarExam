@@ -21,28 +21,17 @@
 a - Data indsamling - hvad kan jeg vise, hvad ville give mening at vise
 b - Basic mappe/filstruktur & minify & transpiling & git ("init" commit)
 c - Inspirationsindsamling til design
-d - AdobeXD sketch mobil/tablet/desktop
-e - HTML & CSS layout mobil/tablet/desktop
+d - AdobeXD sketch prototype
+e - HTML & CSS layout
 f - Module Creation = Bartenders
 g - Module Creation = Queue
 h - Module Creation = Beers
 i - Module Creation = Prognosis
 j - Module Creation = Sales
 k - Make the site beautiful
-l - Transitions (sigh)
-m - 
-n - 
+l - Github & Readme
+m - Dokumentation
 
 
-
-
-// HUSK AT TRANSPILE JAVASCRIPT
-
-
-tag fat i hvert nyt id
-tilføj til et array
-tilføj order.length af hvert id i array til en variabel
-
-indeholder arrayet ikke dette id så skal det tilføje
-tilføj alt til array
-så conditional
+dokumentation - Pdf eller kan det klares i GitHub repo README.md
+media queries
